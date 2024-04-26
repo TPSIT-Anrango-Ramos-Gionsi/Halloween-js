@@ -1,0 +1,94 @@
+#playInfoTimer{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    top:50%;
+    height:50%;
+    width:30%;
+  
+}
+#playInfoTimer div{
+    border: 0.5px solid black;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1px;
+}
+#playInfoTimer>div{
+    height: 70%;
+}
+#playInfoTimer>div,#playInfoTimer section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#playInfoTimer section>div{
+    width: 50%;
+}
+#playInfoTimer section{
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined{
+    display: block;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    border-radius: 100%;
+    background-color: black;
+    color: white;
+}
+td{
+    height: 40px;
+    width: 40px;
+}
+td:hover{
+    transform: scale(1.2);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+header article div{
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    font-size: 50pt;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    
+}
+header article{
+    display: flex;
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header article div:nth-child(1){top: 3px;}
+header article div:nth-child(2){top: 9px;left: -2px;}
+header article div:nth-child(3){top: 4px;left: -2px;}
+header article div:nth-child(4){top: 8px;left: -4px;}
+
+header p{color: gold;font-weight: bolder;}
+footer{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}

@@ -29,8 +29,11 @@ function init()
     tabella+="</table>"
 
     document.querySelector("main").innerHTML=tabella;
+
+    document.getElementById("playInfoTimer").style.display="block";
     let playDiv=document.getElementById("playInfoTimer").outerHTML;
-    document.getElementById("playInfoTimer").outerHTML="";
+    document.getElementById("playInfoTimer").style.display="none";
+
     document.querySelector("table").innerHTML+=playDiv;
 
     document.querySelector("table").style.borderCollapse="collapse";
@@ -126,7 +129,7 @@ function returnColor()
 function giochiamo(){
     aPreso=false;
     bPreso=false;
-    alert("45 punti ed hai vinto")
+    alert("40 punti ed hai vinto")
     timer=100000;
     punti=0;
     giocoIniziato=true;
@@ -136,11 +139,12 @@ function timerSecondi()
 {
     
     document.querySelector("#playInfoTimer section div:last-child span:nth-child(2)").innerHTML=`${Math.floor((timer/1000)/60)}:${(Math.floor(timer/1000)%60)}`
-    if(timer==0||punti>=45) 
+    if(timer==0||punti>=40) 
     {
         clearInterval(idTimer)
         giocoIniziato=false;
         scoreBoard();
+        init();
     }
         timer-=100;
 }
@@ -205,9 +209,9 @@ function contapunti(event){
         
 
     }
-    // else alert("Premere per cominciare a giocare")
+    else alert("Premere per cominciare a giocare")
 }
 function scoreBoard(){
-    if(punti>=45) alert("Bravo hai vinto il gioco")
+    if(punti>=40) alert("Bravo hai vinto il gioco")
     else alert("Mi spiace non hai completato in tempo il gioco")
 }
